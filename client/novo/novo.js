@@ -3,7 +3,7 @@ Template.novo.events({
     e.preventDefault();
     let _input = $('#tarefa');
     let tarefa = _input.val();
-    Tarefas.insert({nome: tarefa, data: new Date()});
+    Meteor.call("adiciona",{nome: tarefa});
     _input.val('');
   }
 });
